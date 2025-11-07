@@ -9,6 +9,14 @@ const APPS = [
     tags: ["education","pali","lms"]
   },
   {
+    name: "College",
+    host: "college.pannaedu.org",
+    url: "https://college.pannaedu.org",
+    icon: "ri-seedling-line",
+    desc: "Events, chants, images and posts",
+    tags: ["education","pali","lms"]
+  },
+  {
     name: "Inventory",
     host: "inventory.pannaedu.org",
     url: "https://inventory.pannaedu.org",
