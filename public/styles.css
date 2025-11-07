@@ -117,3 +117,50 @@ body{
   padding:30px 24px; text-align:center; color:var(--muted)
 }
 .empty{ text-align:center; padding:24px }
+
+.tile{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:14px;
+  border-radius:18px;
+  min-height:150px;
+  isolation:isolate;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease, outline .18s ease;
+}
+
+.tile .hero {
+  width: 100%;
+  height: 90px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.95;
+}
+
+.tile .top{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.tile .body-lines p{
+  margin:0;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+.tile:hover{
+  outline:2px solid rgba(146,230,225,.35);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.32);
+}

@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "panna-hub",
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
