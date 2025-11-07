@@ -67,7 +67,7 @@ const APPS = [
   },
   {
     name: "ShweLib",
-    host: "shwelib.pannaedu.org",
+    host: "lib.pannaedu.org",
     url: "https://shwelib.pannaedu.org",
     icon: "ri-folder-open-line",
     desc: [
