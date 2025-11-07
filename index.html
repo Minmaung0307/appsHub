@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>PannaEdu • App Hub</title>
+
+    <!-- Base (works on Firebase Hosting / any subpath) -->
+    <base href="./">
+
+    <!-- Icons / Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Minimal favicon (data URI – no extra files) -->
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="%232b7a76"/><text x="50" y="62" font-size="60" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif">P</text></svg>'>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <i class="ri-apps-2-line"></i>
+        <span class="title">PannaEdu • App Hub</span>
+      </div>
+
+      <div class="actions">
+        <div class="search">
+          <i class="ri-search-line"></i>
+          <input id="q" type="search" placeholder="Search apps…" autocomplete="off" aria-label="Search apps">
+        </div>
+        <button id="themeBtn" class="btn ghost" title="Toggle theme" aria-label="Toggle theme">
+          <i class="ri-sun-line" id="themeIcon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="intro card">
+        <div class="intro-text">
+          <h1>All your apps, one home.</h1>
+          <p class="muted">
+            Click any card to open its app. Use the search to filter. This hub is a static page—fast, secure, and easy to host.
+          </p>
+          <div class="pills" id="tagRow" aria-label="Quick filters"></div>
+        </div>
+      </section>
+
+      <section>
+        <div id="grid" class="grid"></div>
+        <p id="empty" class="empty muted" hidden>No apps match your filter.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© <span id="year"></span> PannaEdu. Built with love.</small>
+    </footer>
+  </body>
+</html>

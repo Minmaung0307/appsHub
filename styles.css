@@ -1,0 +1,119 @@
+:root{
+  --bg: #0b0d10;
+  --panel: rgba(255,255,255,0.06);
+  --panel-2: rgba(255,255,255,0.12);
+  --text: #eef2f7;
+  --muted: #b3becc;
+  --brand: #2b7a76;
+  --brand-2:#92e6e1;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --ring: 0 0 0 2px rgba(146,230,225,.35);
+}
+@media (prefers-color-scheme: light){
+  html[data-theme="auto"]{
+    --bg:#f6f8fb; --panel:#ffffff; --panel-2:#f0f4f9;
+    --text:#1f2a37; --muted:#5b6778;
+    --shadow: 0 10px 30px rgba(31,42,55,.08);
+    --ring: 0 0 0 2px rgba(43,122,118,.25);
+  }
+}
+html[data-theme="light"]{
+  --bg:#f6f8fb; --panel:#ffffff; --panel-2:#f0f4f9;
+  --text:#1f2a37; --muted:#5b6778;
+  --shadow: 0 10px 30px rgba(31,42,55,.08);
+  --ring: 0 0 0 2px rgba(43,122,118,.25);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color:var(--text); background:
+  radial-gradient(1200px 800px at 10% -10%, rgba(146,230,225,.25), transparent 60%),
+  radial-gradient(1200px 800px at 90% 10%, rgba(43,122,118,.25), transparent 60%),
+  var(--bg);
+}
+
+.topbar{
+  position:sticky; top:0; z-index:10;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 18px; backdrop-filter:saturate(180%) blur(10px);
+  background:linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,0)) ;
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+.brand .title{font-size:18px}
+.brand i{font-size:22px; color:var(--brand-2)}
+.actions{display:flex; align-items:center; gap:10px}
+
+.search{
+  display:flex; align-items:center; gap:8px;
+  background:var(--panel); padding:8px 10px; border-radius:12px; min-width:260px;
+  border:1px solid transparent;
+}
+.search:focus-within{ box-shadow:var(--ring); border-color:transparent }
+.search input{background:transparent; border:none; outline:none; color:var(--text); width:100%}
+
+.btn{
+  border:none; background:var(--brand); color:white; padding:10px 14px;
+  border-radius:12px; font-weight:600; cursor:pointer; transition:.2s transform;
+}
+.btn:hover{ transform:translateY(-1px) }
+.btn.ghost{ background:var(--panel); color:var(--text) }
+
+.wrap{ padding:24px; max-width:1200px; margin: 0 auto;}
+
+.card{
+  background:linear-gradient(180deg, var(--panel), var(--panel-2));
+  border:1px solid rgba(255,255,255,.06); border-radius:20px; box-shadow:var(--shadow);
+}
+.intro{ padding:22px }
+.intro h1{ margin:6px 0 4px 0; font-size:26px }
+.muted{ color:var(--muted) }
+
+.pills{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px }
+.pill{
+  font-size:12px; padding:6px 10px; border-radius:999px; background:var(--panel);
+  border:1px solid rgba(255,255,255,.08); cursor:pointer; user-select:none;
+}
+.pill.active{ background:var(--brand); color:white; border-color:transparent }
+
+.grid{
+  margin-top:18px;
+  display:grid; gap:16px;
+  grid-template-columns: repeat(1, minmax(0,1fr));
+}
+@media (min-width:540px){ .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width:900px){ .grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
+
+.tile{
+  position:relative; overflow:hidden;
+  display:flex; flex-direction:column; gap:12px;
+  padding:16px; border-radius:18px; min-height:130px; isolation:isolate;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:var(--shadow);
+}
+.tile::before{
+  content:""; position:absolute; inset:-1px; z-index:-1;
+  background:
+   radial-gradient(300px 180px at 0% 0%, rgba(146,230,225,.25), transparent 50%),
+   radial-gradient(300px 180px at 100% 100%, rgba(43,122,118,.25), transparent 50%);
+  filter: blur(10px);
+}
+.tile:hover{ outline:2px solid rgba(146,230,225,.35); transform: translateY(-2px); transition:.18s ease }
+.tile .top{ display:flex; align-items:center; gap:10px }
+.tile .icon{ height:40px; width:40px; border-radius:12px; display:grid; place-items:center; background:var(--panel); }
+.tile .icon i{ font-size:22px; color:var(--brand-2) }
+.tile h3{ margin:0; font-size:18px }
+.tile p{ margin:0; font-size:13px; color:var(--muted) }
+.tile .tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:6px }
+.tag{ font-size:11px; padding:4px 8px; border-radius:999px; background:var(--panel); border:1px solid rgba(255,255,255,.08) }
+
+.tile a{
+  position:absolute; inset:0; border-radius:18px; outline:0; }
+.tile a:focus{ box-shadow: var(--ring) }
+
+.footer{
+  padding:30px 24px; text-align:center; color:var(--muted)
+}
+.empty{ text-align:center; padding:24px }
