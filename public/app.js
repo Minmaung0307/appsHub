@@ -5,71 +5,77 @@ const APPS = [
     host: "pali.pannaedu.org",
     url: "https://pali.pannaedu.org",
     icon: "ri-seedling-line",
+    hero: "/img/pali.png",
     desc: [
-      "Structured Pāli lessons from zero to advanced.",
-      "Audio chanting, vocabulary, and grammar drills.",
-      "Track your learning progress and achievements.",
-      "Ideal for monks, students, and devotees."
+      "Learn Pāli systematically — from beginner to advanced.",
+      "Includes chanting guides, vocabulary lists, and grammar notes.",
+      "Audio-visual lessons for modern learners of the ancient language.",
+      "Empowering monks, students, and lay practitioners worldwide."
     ],
-    tags: ["education","pali","lms"]
+    tags: ["education","pali","learning"]
   },
   {
     name: "College Portal",
     host: "college.pannaedu.org",
     url: "https://college.pannaedu.org",
     icon: "ri-community-line",
+    hero: "/img/college.png",
     desc: [
-      "Campus news, announcements, and activities.",
-      "Exam schedules and academic information hub.",
-      "Photo galleries from events and ceremonies.",
-      "Designed for students, teachers, and staff."
+      "Central hub for campus updates and announcements.",
+      "View schedules, events, and academic resources in one place.",
+      "Online access to results, attendance, and assignments.",
+      "Designed to connect teachers, students, and alumni together."
     ],
-    tags: ["college","community","news"]
+    tags: ["college","community","education"]
   },
   {
     name: "Inventory",
     host: "inventory.pannaedu.org",
     url: "https://inventory.pannaedu.org",
     icon: "ri-archive-2-line",
+    hero: "/img/inventory.png",
     desc: [
       "Manage items, stock levels, and thresholds.",
       "Simple controls for adjustments and alerts.",
       "Supports categories, pricing, and COGS view.",
       "Built for monasteries, offices, and shops."
     ],
-    tags: ["business","pos","inventory"]
+    tags: ["business","management", "stock", "inventory"]
   },
   {
     name: "TMF Tracker",
     host: "tmf.pannaedu.org",
     url: "https://tmf.pannaedu.org",
     icon: "ri-heart-pulse-line",
+    hero: "/img/tmf.png",
     desc: [
-      "Track daily habits and well-being metrics.",
-      "Gentle visual insights for self-reflection.",
-      "Mobile-friendly, distraction-free layout.",
-      "Designed for mindful personal practice."
+      "Discover Theravāda Buddhist temples across the United States.",
+    "Search by state, city, or temple name with interactive map view.",
+    "View temple details, contact info, and schedule of activities.",
+    "Connect with your nearest monastery and upcoming events easily."
     ],
-    tags: ["wellness","tracker","mindfulness"]
+    tags: ["temples", "buddhism", "directory", "usa"]
   },
   {
     name: "OpenLearn",
-    host: "openlearn.pannaedu.org",
-    url: "https://openlearn.pannaedu.org",
+    host: "ihub.pannaedu.org",
+    url: "https://ihub.pannaedu.org",
     icon: "ri-book-open-line",
+    hero: "/img/openlearn.png",
     desc: [
       "Short courses and micro lessons in one place.",
       "Mix of text, audio, and simple quizzes.",
       "Open access for curious learners of all ages.",
       "Perfect for sharing community knowledge."
     ],
-    tags: ["education","open","courses"]
+    tags: ["education","learning","courses"]
   },
   {
     name: "ShweLib",
     host: "lib.pannaedu.org",
-    url: "https://shwelib.pannaedu.org",
+    url: "https://lib.pannaedu.org",
     icon: "ri-folder-open-line",
+    hero: "/img/lib.png",
     desc: [
       "Digital library for texts, audio, and video.",
       "Searchable collections for study and reference.",
@@ -83,13 +89,56 @@ const APPS = [
     host: "food.pannaedu.org",
     url: "https://food.pannaedu.org",
     icon: "ri-restaurant-2-line",
+    hero: "/img/meals.png",
     desc: [
       "Browse daily meals and donation schedules.",
       "Helps kitchens coordinate and reduce waste.",
       "Simple overview for donors and volunteers.",
       "Clear, visual, and easy to maintain."
     ],
-    tags: ["food","meals","donation"]
+    tags: ["food","meals","community"]
+  },
+  {
+    name: "iLearn",
+    host: "ilearn.pannaedu.org",
+    url: "https://ilearn.pannaedu.org",
+    icon: "ri-restaurant-2-line",
+    hero: "/img/ilearn.png",
+    desc: [
+      "Self-paced online courses for lifelong learners.",
+      "Includes certifications and gamified learning paths.",
+      "Track your lessons, progress, and achievements.",
+      "Created for modern, flexible education on the go."
+    ],
+    tags: ["education", "courses", "certificates"]
+  },
+  {
+    name: "iCal",
+    host: "ical.pannaedu.org",
+    url: "https://ical.pannaedu.org",
+    icon: "ri-restaurant-2-line",
+    hero: "/img/ical.png",
+    desc: [
+      "Smart calendar showing lunar, festival, and cultural days.",
+      "Includes Myanmar holidays, Pāli observances, and events.",
+      "Option to add custom reminders and notes easily.",
+      "Syncs beautifully with your device calendar."
+    ],
+    tags: ["calendar", "myanmar", "events"]
+  },
+  {
+    name: "OBX",
+    host: "obx.pannaedu.org",
+    url: "https://obx.pannaedu.org",
+    icon: "ri-restaurant-2-line",
+    hero: "/img/obx.png",
+    desc: [
+      "Real-time Outer Banks event guide and map viewer.",
+      "Find concerts, seafood festivals, marathons, and art fairs.",
+      "Auto-updates with verified local tourism data sources.",
+      "Plan your trips across Nags Head, Manteo, and Kitty Hawk."
+    ],
+    tags: ["events", "travel", "outerbanks"]
   }
 ];
 // ---------- Utilities ----------
@@ -107,10 +156,63 @@ const HERO_BACKGROUNDS = [
   "linear-gradient(135deg,#7c3aed,#ec4899)"
 ];
 
-function pickHeroImage(app, index) {
-  // try image based on app.host or app.name
-  const base = `/img/${(app.host || app.name || "").split(".")[0].toLowerCase()}.jpg`;
-  return base || HERO_BACKGROUNDS[index % HERO_BACKGROUNDS.length];
+const HERO_REMOTE = [
+  "https://source.unsplash.com/800x400/?kids,learning",
+  "https://source.unsplash.com/800x400/?students,library",
+  "https://source.unsplash.com/800x400/?children,reading",
+  "https://source.unsplash.com/800x400/?classroom,smile",
+  "https://source.unsplash.com/800x400/?girl,study",
+  "https://source.unsplash.com/800x400/?boy,computer",
+  "https://source.unsplash.com/800x400/?friends,study",
+  "https://source.unsplash.com/800x400/?youth,education",
+  "https://source.unsplash.com/800x400/?books,colorful",
+  "https://source.unsplash.com/800x400/?kids,creative"
+];
+
+const HERO_IMAGES = [
+  "/img/college.png",
+  "/img/food.png",
+  "/img/inventory.png",
+  "/img/obx.png",
+  "/img/openlearn.png",
+  "/img/pali.png",
+  "/img/lib.png",
+  "/img/tmf.png",
+  "/img/ical.png",
+  "/img/ilearn.png"
+];
+
+function stableIndex(key, len) {
+  let h = 0;
+  for (let i = 0; i < key.length; i++) {
+    h = (h * 31 + key.charCodeAt(i)) >>> 0;
+  }
+  return h % len;
+}
+
+function pickHero(app, index) {
+  const key  = (app.name || "") + "|" + (app.host || "") + "|" + index;
+  const grad = HERO_BACKGROUNDS[index % HERO_BACKGROUNDS.length];
+
+  // 1) app-specific hero (✅ primary)
+  if (app.hero) {
+    return `url('${app.hero}')`;
+  }
+
+  // 2) local predefined hero images (optional shared pool)
+  if (HERO_IMAGES && HERO_IMAGES.length) {
+    const img = HERO_IMAGES[stableIndex(key, HERO_IMAGES.length)];
+    return `url('${img}')`;
+  }
+
+  // 3) remote random education images
+  if (HERO_REMOTE && HERO_REMOTE.length) {
+    const rimg = HERO_REMOTE[stableIndex(key, HERO_REMOTE.length)];
+    return `url('${rimg}')`;
+  }
+
+  // 4) fallback: gradient only
+  return grad;
 }
 
 function pickHeroBg(i) {
@@ -151,16 +253,18 @@ function renderTags(apps){
 
 // Card with hero top + multi-line desc
 function card(app, index){
-  const lines = Array.isArray(app.desc) ? app.desc : String(app.desc || "").split("\n");
+  const lines = Array.isArray(app.desc)
+    ? app.desc
+    : String(app.desc || "").split("\n");
   const first = lines[0] || "";
-  const rest  = lines.slice(1, 4); // up to 4 lines total
-  const hero  = pickHeroImage(app, index);
+  const rest  = lines.slice(1, 4);
+  const heroBg = pickHero(app, index);
 
   return `
   <article class="tile card"
            data-name="${app.name.toLowerCase()}"
            data-tags="${(app.tags||[]).join(',')}">
-    <div class="hero" style="background-image:url('${hero}');"></div>
+    <div class="hero" style="background-image:${heroBg};"></div>
     <div class="top">
       <div class="icon"><i class="${app.icon}"></i></div>
       <div>
