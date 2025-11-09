@@ -89,7 +89,7 @@ const APPS = [
     host: "food.pannaedu.org",
     url: "https://food.pannaedu.org",
     icon: "ri-restaurant-2-line",
-    hero: "/img/meals.png",
+    hero: "/img/foods.png",
     desc: [
       "Browse daily meals and donation schedules.",
       "Helps kitchens coordinate and reduce waste.",
@@ -139,6 +139,20 @@ const APPS = [
       "Plan your trips across Nags Head, Manteo, and Kitty Hawk."
     ],
     tags: ["events", "travel", "outerbanks"]
+  },
+  {
+    name: "SafeMM",
+    host: "safemm.pannaedu.org",
+    url: "https://safemm.pannaedu.org",
+    icon: "ri-restaurant-2-line",
+    hero: "/img/safemm.png",
+    desc: [
+      "Detect scams before they reach you — powered by the Myanmar community.",
+      "Check phone numbers, bank info, or social profiles for fraud reports.",
+      "Stay informed with verified updates and real-time warnings.",
+      "Together, we can build a safer internet for everyone."
+    ],
+    tags: ["scam", "theft", "ကျားဖြန့်"]
   }
 ];
 // ---------- Utilities ----------
