@@ -10,9 +10,9 @@ const APPS = [
       "Learn Pāli systematically — from beginner to advanced.",
       "Includes chanting guides, vocabulary lists, and grammar notes.",
       "Audio-visual lessons for modern learners of the ancient language.",
-      "Empowering monks, students, and lay practitioners worldwide."
+      "Empowering monks, students, and lay practitioners worldwide.",
     ],
-    tags: ["education","pali","learning"]
+    tags: ["education", "pali", "learning"],
   },
   {
     name: "College Portal",
@@ -24,9 +24,9 @@ const APPS = [
       "Central hub for campus updates and announcements.",
       "View schedules, events, and academic resources in one place.",
       "Online access to results, attendance, and assignments.",
-      "Designed to connect teachers, students, and alumni together."
+      "Designed to connect teachers, students, and alumni together.",
     ],
-    tags: ["college","community","education"]
+    tags: ["college", "community", "education"],
   },
   {
     name: "Inventory",
@@ -38,9 +38,9 @@ const APPS = [
       "Manage items, stock levels, and thresholds.",
       "Simple controls for adjustments and alerts.",
       "Supports categories, pricing, and COGS view.",
-      "Built for monasteries, offices, and shops."
+      "Built for monasteries, offices, and shops.",
     ],
-    tags: ["business","management", "stock", "inventory"]
+    tags: ["business", "management", "stock", "inventory"],
   },
   {
     name: "TMF Tracker",
@@ -50,11 +50,11 @@ const APPS = [
     hero: "/img/tmf.png",
     desc: [
       "Discover Theravāda Buddhist temples across the United States.",
-    "Search by state, city, or temple name with interactive map view.",
-    "View temple details, contact info, and schedule of activities.",
-    "Connect with your nearest monastery and upcoming events easily."
+      "Search by state, city, or temple name with interactive map view.",
+      "View temple details, contact info, and schedule of activities.",
+      "Connect with your nearest monastery and upcoming events easily.",
     ],
-    tags: ["temples", "buddhism", "directory", "usa"]
+    tags: ["temples", "buddhism", "directory", "usa"],
   },
   {
     name: "OpenLearn",
@@ -66,9 +66,9 @@ const APPS = [
       "Short courses and micro lessons in one place.",
       "Mix of text, audio, and simple quizzes.",
       "Open access for curious learners of all ages.",
-      "Perfect for sharing community knowledge."
+      "Perfect for sharing community knowledge.",
     ],
-    tags: ["education","learning","courses"]
+    tags: ["education", "learning", "courses"],
   },
   {
     name: "ShweLib",
@@ -80,9 +80,9 @@ const APPS = [
       "Digital library for texts, audio, and video.",
       "Searchable collections for study and reference.",
       "Curated resources for Buddhist studies.",
-      "Accessible from web and mobile devices."
+      "Accessible from web and mobile devices.",
     ],
-    tags: ["library","media","resources"]
+    tags: ["library", "media", "resources"],
   },
   {
     name: "FoodFinder",
@@ -94,9 +94,9 @@ const APPS = [
       "Browse daily meals and donation schedules.",
       "Helps kitchens coordinate and reduce waste.",
       "Simple overview for donors and volunteers.",
-      "Clear, visual, and easy to maintain."
+      "Clear, visual, and easy to maintain.",
     ],
-    tags: ["food","meals","community"]
+    tags: ["food", "meals", "community"],
   },
   {
     name: "iLearn",
@@ -108,9 +108,9 @@ const APPS = [
       "Self-paced online courses for lifelong learners.",
       "Includes certifications and gamified learning paths.",
       "Track your lessons, progress, and achievements.",
-      "Created for modern, flexible education on the go."
+      "Created for modern, flexible education on the go.",
     ],
-    tags: ["education", "courses", "certificates"]
+    tags: ["education", "courses", "certificates"],
   },
   {
     name: "iCal",
@@ -122,9 +122,9 @@ const APPS = [
       "Smart calendar showing lunar, festival, and cultural days.",
       "Includes Myanmar holidays, Pāli observances, and events.",
       "Option to add custom reminders and notes easily.",
-      "Syncs beautifully with your device calendar."
+      "Syncs beautifully with your device calendar.",
     ],
-    tags: ["calendar", "myanmar", "events"]
+    tags: ["calendar", "myanmar", "events"],
   },
   {
     name: "OBX",
@@ -136,9 +136,9 @@ const APPS = [
       "Real-time Outer Banks event guide and map viewer.",
       "Find concerts, seafood festivals, marathons, and art fairs.",
       "Auto-updates with verified local tourism data sources.",
-      "Plan your trips across Nags Head, Manteo, and Kitty Hawk."
+      "Plan your trips across Nags Head, Manteo, and Kitty Hawk.",
     ],
-    tags: ["events", "travel", "outerbanks"]
+    tags: ["events", "travel", "outerbanks"],
   },
   {
     name: "SafeMM",
@@ -150,15 +150,30 @@ const APPS = [
       "Detect scams before they reach you — powered by the Myanmar community.",
       "Check phone numbers, bank info, or social profiles for fraud reports.",
       "Stay informed with verified updates and real-time warnings.",
-      "Together, we can build a safer internet for everyone."
+      "Together, we can build a safer internet for everyone.",
     ],
-    tags: ["scam", "theft", "ကျားဖြန့်"]
-  }
+    tags: ["scam", "theft", "ကျားဖြန့်"],
+  },
+  {
+    name: "MyVault",
+    host: "i-vault.pannaedu.org",
+    url: "https://i-vault.pannaedu.org",
+    icon: "ri-restaurant-2-line",
+    hero: "/img/i-vault.png",
+    desc: [
+      "Protect your most important documents with strong end-to-end encryption — stored only in your own Google Drive.",
+      "Keep IDs, tax files, medical records, immigration papers, and personal photos safely organized in one private vault.",
+      "Your vault password never leaves your device — only you can decrypt your files.",
+      "Enjoy a clean, simple dashboard to quickly find what you need, anytime.",
+      "A personal digital safe designed for real life — secure, private, and always under your control.",
+    ],
+    tags: ["private", "vault", "secure"],
+  },
 ];
 // ---------- Utilities ----------
-const $  = (s, r=document) => r.querySelector(s);
-const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
-const by = (k) => (a,b)=> (a[k] > b[k] ? 1 : -1);
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const by = (k) => (a, b) => a[k] > b[k] ? 1 : -1;
 
 // Hero background presets (image-like gradients)
 const HERO_BACKGROUNDS = [
@@ -167,7 +182,7 @@ const HERO_BACKGROUNDS = [
   "linear-gradient(135deg,#0f766e,#22c55e)",
   "linear-gradient(135deg,#1d4ed8,#38bdf8)",
   "linear-gradient(135deg,#78350f,#f97316)",
-  "linear-gradient(135deg,#7c3aed,#ec4899)"
+  "linear-gradient(135deg,#7c3aed,#ec4899)",
 ];
 
 const HERO_REMOTE = [
@@ -180,7 +195,7 @@ const HERO_REMOTE = [
   "https://source.unsplash.com/800x400/?friends,study",
   "https://source.unsplash.com/800x400/?youth,education",
   "https://source.unsplash.com/800x400/?books,colorful",
-  "https://source.unsplash.com/800x400/?kids,creative"
+  "https://source.unsplash.com/800x400/?kids,creative",
 ];
 
 const HERO_IMAGES = [
@@ -193,7 +208,7 @@ const HERO_IMAGES = [
   "/img/lib.png",
   "/img/tmf.png",
   "/img/ical.png",
-  "/img/ilearn.png"
+  "/img/ilearn.png",
 ];
 
 function stableIndex(key, len) {
@@ -205,7 +220,7 @@ function stableIndex(key, len) {
 }
 
 function pickHero(app, index) {
-  const key  = (app.name || "") + "|" + (app.host || "") + "|" + index;
+  const key = (app.name || "") + "|" + (app.host || "") + "|" + index;
   const grad = HERO_BACKGROUNDS[index % HERO_BACKGROUNDS.length];
 
   // 1) app-specific hero (✅ primary)
@@ -234,30 +249,31 @@ function pickHeroBg(i) {
 }
 
 // Theme
-function getTheme(){
+function getTheme() {
   const t = localStorage.getItem("theme");
   return t || "auto";
 }
-function setTheme(mode){
+function setTheme(mode) {
   document.documentElement.setAttribute("data-theme", mode);
   localStorage.setItem("theme", mode);
   $("#themeIcon").className = mode === "light" ? "ri-moon-line" : "ri-sun-line";
 }
 
 // Render tags from all unique tags
-function renderTags(apps){
-  const box = $("#tagRow"); if (!box) return;
+function renderTags(apps) {
+  const box = $("#tagRow");
+  if (!box) return;
   box.innerHTML = "";
   const set = new Set();
-  apps.forEach(a => (a.tags||[]).forEach(t=>set.add(t)));
+  apps.forEach((a) => (a.tags || []).forEach((t) => set.add(t)));
   const all = ["all", ...Array.from(set).sort()];
-  all.forEach(t=>{
+  all.forEach((t) => {
     const b = document.createElement("button");
-    b.className = "pill" + (t==="all" ? " active" : "");
+    b.className = "pill" + (t === "all" ? " active" : "");
     b.textContent = t;
     b.dataset.tag = t;
-    b.addEventListener("click", ()=>{
-      $$(".pill").forEach(p=>p.classList.remove("active"));
+    b.addEventListener("click", () => {
+      $$(".pill").forEach((p) => p.classList.remove("active"));
       b.classList.add("active");
       filter();
     });
@@ -266,18 +282,18 @@ function renderTags(apps){
 }
 
 // Card with hero top + multi-line desc
-function card(app, index){
+function card(app, index) {
   const lines = Array.isArray(app.desc)
     ? app.desc
     : String(app.desc || "").split("\n");
   const first = lines[0] || "";
-  const rest  = lines.slice(1, 4);
+  const rest = lines.slice(1, 4);
   const heroBg = pickHero(app, index);
 
   return `
   <article class="tile card"
            data-name="${app.name.toLowerCase()}"
-           data-tags="${(app.tags||[]).join(',')}">
+           data-tags="${(app.tags || []).join(",")}">
     <div class="hero" style="background-image:${heroBg};"></div>
     <div class="top">
       <div class="icon"><i class="${app.icon}"></i></div>
@@ -287,53 +303,58 @@ function card(app, index){
       </div>
     </div>
     <div class="body-lines">
-      ${rest.map(l => `<p>${l}</p>`).join("")}
+      ${rest.map((l) => `<p>${l}</p>`).join("")}
     </div>
     <div class="tags">
-      ${(app.tags||[]).map(t=>`<span class="tag">#${t}</span>`).join("")}
+      ${(app.tags || []).map((t) => `<span class="tag">#${t}</span>`).join("")}
     </div>
-    <a href="${app.url}" target="_self" rel="noopener" aria-label="Open ${app.name}"></a>
+    <a href="${app.url}" target="_self" rel="noopener" aria-label="Open ${
+    app.name
+  }"></a>
   </article>`;
 }
 
-function render(apps){
-  const grid = $("#grid"); if (!grid) return;
+function render(apps) {
+  const grid = $("#grid");
+  if (!grid) return;
   grid.innerHTML = apps
     .slice()
     .sort(by("name"))
-    .map((app,i)=>card(app,i))
+    .map((app, i) => card(app, i))
     .join("");
   const empty = $("#empty");
   if (empty) empty.hidden = apps.length > 0;
 }
 
-function filter(){
+function filter() {
   const qEl = $("#q");
   const q = (qEl?.value || "").toLowerCase().trim();
   const tag = $$(".pill.active")[0]?.dataset.tag || "all";
 
-  const out = APPS.filter(a=>{
+  const out = APPS.filter((a) => {
     const text = [
       a.name,
       ...(Array.isArray(a.desc) ? a.desc : [a.desc]),
-      ...(a.tags || [])
-    ].join(" ").toLowerCase();
+      ...(a.tags || []),
+    ]
+      .join(" ")
+      .toLowerCase();
     const hitQ = !q || text.includes(q);
-    const hitT = tag === "all" || (a.tags||[]).includes(tag);
+    const hitT = tag === "all" || (a.tags || []).includes(tag);
     return hitQ && hitT;
   });
   render(out);
 }
 
 // ---------- Init ----------
-window.addEventListener("DOMContentLoaded", ()=>{
+window.addEventListener("DOMContentLoaded", () => {
   const y = $("#year");
   if (y) y.textContent = new Date().getFullYear();
 
   setTheme(getTheme());
   const themeBtn = $("#themeBtn");
   if (themeBtn) {
-    themeBtn.addEventListener("click", ()=>{
+    themeBtn.addEventListener("click", () => {
       const cur = getTheme();
       const next = cur === "light" ? "auto" : cur === "auto" ? "dark" : "light";
       setTheme(next);
