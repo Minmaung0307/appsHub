@@ -1,6 +1,63 @@
 // ---------- DATA: your apps ----------
 const APPS = [
   {
+    name: "Doc Keeper",
+    host: "dockeeper.pannaedu.org",
+    url: "https://dockeeper.pannaedu.org",
+    icon: "ri-folder-shield-2-line", // လုံခြုံသော ဖိုင်တွဲပုံ
+    hero: "/img/dockeeper.png", // DocKeeper ပုံထည့်ရန်
+    desc: [
+      "Securely store and organize your essential documents in the cloud.",
+      "Categorize files like ID, Tax, Medical, and Auto for easy access.",
+      "Support for photos, videos, and PDFs with instant search functionality.",
+      "Keep your important records safe and accessible anytime, anywhere.",
+    ],
+    tags: ["utility", "storage", "productivity"],
+  },
+
+  {
+    name: "US Life",
+    host: "uslife.pannaedu.org",
+    url: "https://uslife.pannaedu.org",
+    icon: "ri-compass-3-line", // လမ်းညွှန် သံလိုက်အိမ်မြှောင်ပုံ
+    hero: "/img/uslife.png", // US Life ပုံထည့်ရန်
+    desc: [
+      "Your all-in-one living guide and budget tracker for life in the USA.",
+      "Manage income, expenses, and subscriptions with ease.",
+      "Step-by-step guides for Driver's License, Housing, USCIS, and more.",
+      "Find nearby affordable groceries, gas stations, and community services.",
+    ],
+    tags: ["lifestyle", "finance", "guide"],
+  },
+  {
+    name: "iChess",
+    host: "chessmm.pannaedu.org",
+    url: "https://chessmm.pannaedu.org",
+    icon: "ri-gamepad-line", // ဂိမ်းနှင့်ဆိုင်သော အိုင်ကွန်
+    hero: "/img/ichess.png", // Chess ပုံအမည် ပြောင်းထားသည်
+    desc: [
+      "Play real-time multiplayer chess online with friends or practice solo.",
+      "Integrated Stockfish AI for move hints and game analysis.",
+      "Features include drag-and-drop, board flipping, and move validation.",
+      "Clean, mobile-friendly interface for strategy lovers.",
+    ],
+    tags: ["game", "chess", "strategy"],
+  },
+  {
+    name: "mmKyar",
+    host: "https://minmaung0307.github.io/mmKyar/",
+    url: "https://minmaung0307.github.io/mmKyar/",
+    icon: "ri-grid-fill", // ကျားကွက်နှင့်တူသော ဂရစ်ပုံ
+    hero: "/img/mmkyar.png", // ပုံအမည် ပြောင်းထားသည်
+    desc: [
+      "Experience the traditional Myanmar strategy game (Myanmar Dam/Checkers).",
+      "Features classic mechanics like Multi-jump and Flying King (Bo).",
+      "Supports both 'Kill-All' (Suicide) and 'Stalemate' winning conditions.",
+      "Play with friends or practice your strategy on mobile or desktop.",
+    ],
+    tags: ["game", "checkers", "strategy", "myanmar"],
+  },
+  {
     name: "Pāli Lessons",
     host: "pali.pannaedu.org",
     url: "https://pali.pannaedu.org",
@@ -157,7 +214,7 @@ const APPS = [
   {
     name: "MyVault",
     host: "i-vault.pannaedu.org",
-    url: "https://i-vault.pannaedu.org",
+    url: "https://mm-vault.pannaedu.org",
     icon: "ri-restaurant-2-line",
     hero: "/img/i-vault.png",
     desc: [
